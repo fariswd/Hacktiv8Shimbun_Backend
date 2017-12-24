@@ -4,11 +4,11 @@ Mobile app server for hacktiv8 Shimbun
 ## HTTP Endpoint
 | Endpoint         | HTTP    | Require   | Description          |
 |------------------|---------|-----------|----------------------|
-| [#post--apiarticle] [/api/article]     | POST    | {json}    | post a new article   |
-| /api/article/    | GET     | - | get all article  |
-| /api/article/:id | GET     | params.id | get article by id  |
-| /api/article/:id | PUT     | params.id, {json}    | edit an article   |
-| /api/article/:id | DELETE  | params.id | delete an article |
+| [/api/article](#post--apiarticle)     | POST    | {json}    | post a new article   |
+| [/api/article/](#get--apiarticle-or-apiarticleid)    | GET     | - | get all article  |
+| [/api/article/:id](#get--apiarticle-or-apiarticleid) | GET     | params.id | get article by id  |
+| [/api/article/:id](#put--apiarticleid) | PUT     | params.id, {json}    | edit an article   |
+| [/api/article/:id](#delete--apiarticleid) | DELETE  | params.id | delete an article |
 | /api/latest      | GET     | -         | get latest 10         |
 | /api/latest/:page | GET    | params.page |  get page, 10 articles/page |
 | /api/search?keyword= | GET | query.keyword | search by title |
