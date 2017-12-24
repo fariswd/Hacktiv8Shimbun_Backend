@@ -115,6 +115,7 @@ const latestPaging = async (req, res) => {
       .skip(page)
     res.json({
       status: 'OK',
+      page: req.params.page,
       articles: articles
     })
   } catch (err) {
