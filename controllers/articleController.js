@@ -87,11 +87,51 @@ const deleteArticle = async (req, res) => {
   }
 }
 
+const latest = async (req, res) => {
+  try {
+    const articles = await Article
+      .find()
+      .sort({ createdAt: 'desc' })
+      .limit(10)
+    res.json({
+      status: 'OK',
+      articles: articles
+    })
+  } catch (err) {
+    res.status(500).json({
+      status: 'cannot get latest',
+      msg: err
+    })
+  }
+}
+
+const latestPaging = async (req, res) => {
+  try {
+    const page = (+req.params.page - 1) * 10
+    const articles = await Article
+      .find()
+      .sort({ createdAt: 'desc' })
+      .limit(10)
+      .skip(page)
+    res.json({
+      status: 'OK',
+      articles: articles
+    })
+  } catch (err) {
+    res.status(500).json({
+      status: 'cannot get page' + req.params.page,
+      msg: err
+    })
+  }
+}
+
 module.exports = {
   welcomePage,
   postArticle,
   getArticles,
   getArticle,
   editArticle,
-  deleteArticle
+  deleteArticle,
+  latest,
+  latestPaging
 };
