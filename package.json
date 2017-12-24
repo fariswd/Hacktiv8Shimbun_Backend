@@ -1,0 +1,28 @@
+{
+  "name": "hacktiv8shimbun_backend",
+  "version": "1.0.0",
+  "description": "Mobile app server for hacktiv8 Shimbun",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fariswd/Hacktiv8Shimbun_Backend.git"
+  },
+  "author": "Faris Widyantho <radenfaris@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fariswd/Hacktiv8Shimbun_Backend/issues"
+  },
+  "homepage": "https://github.com/fariswd/Hacktiv8Shimbun_Backend#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.7",
+    "morgan": "^1.9.0",
+    "redis": "^2.8.0"
+  }
+}
