@@ -4,7 +4,7 @@ Mobile app server for hacktiv8 Shimbun
 ## HTTP Endpoint
 | Endpoint         | HTTP    | Require   | Description          |
 |------------------|---------|-----------|----------------------|
-| /api/article     | POST    | {json}    | post a new article   |
+| [#post--apiarticle] [/api/article]     | POST    | {json}    | post a new article   |
 | /api/article/    | GET     | - | get all article  |
 | /api/article/:id | GET     | params.id | get article by id  |
 | /api/article/:id | PUT     | params.id, {json}    | edit an article   |
@@ -219,8 +219,8 @@ required: id=[object_id]
 ```js
 {
 	"status": {
-		"n": 1,
-		"ok": 1
+  	"n": 1,
+  	"ok": 1
 	},
 	"articleBefore": {
     "__v": 0,
