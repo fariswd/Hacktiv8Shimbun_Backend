@@ -38,8 +38,8 @@ Mobile app server for hacktiv8 Shimbun
 * Success Response  
 ```js
 {
-	"status": "OK",
-	"newArticle": {
+    "status": "OK",
+    "newArticle": {
     "__v": 0,
     "_id": "5a3f7bc02821764c7f44b86e",
     "title": "[Waifu Friday] Kizuna Ai",
@@ -166,41 +166,41 @@ required: id=[object_id]
 * Success Response  
 ```js
 {
-	"status": {
-      "n": 1,
-      "nModified": 1,
-      "ok": 1
-	},
-	"articleBefore": {
-      "__v": 0,
-      "_id": "5a3f7bc02821764c7f44b86e",
-      "title": "[Waifu Friday] Kizuna Ai",
-      "author": "Kagamine Punk",
-      "image_header": "http://jpg.link.com/img.jpg",
-      "category": [
-        "Perfect",
-        "Virtual",
-        "Waifu",
-        "waifu friday"
-      ],
-      "content": "<p>Some HTML Content</p>",
-      "createdAt": "2017-08-17T09:58:00.562Z"
-	},
-	"artcileAfter": {
-      "__v": 0,
-      "_id": "5a3f7bc02821764c7f44b86e",
-      "title": "[Waifu Friday] Kizuna Ai",
-      "author": "Kagamine Punk",
-      "image_header": "http://jpg.link.com/img.jpg",
-      "category": [
-        "Perfect",
-        "Virtual",
-        "Waifu",
-        "waifu friday"
-      ],
-      "content": "<p>Some HTML Content</p>",
-      "createdAt": "2017-08-17T09:58:00.562Z"
-	}
+      "status": {
+        "n": 1,
+        "nModified": 1,
+        "ok": 1
+      },
+        "articleBefore": {
+        "__v": 0,
+        "_id": "5a3f7bc02821764c7f44b86e",
+        "title": "[Waifu Friday] Kizuna Ai",
+        "author": "Kagamine Punk",
+        "image_header": "http://jpg.link.com/img.jpg",
+        "category": [
+          "Perfect",
+          "Virtual",
+          "Waifu",
+          "waifu friday"
+        ],
+        "content": "<p>Some HTML Content</p>",
+        "createdAt": "2017-08-17T09:58:00.562Z"
+      },
+      "artcileAfter": {
+        "__v": 0,
+        "_id": "5a3f7bc02821764c7f44b86e",
+        "title": "[Waifu Friday] Kizuna Ai",
+        "author": "Kagamine Punk",
+        "image_header": "http://jpg.link.com/img.jpg",
+        "category": [
+          "Perfect",
+          "Virtual",
+          "Waifu",
+          "waifu friday"
+        ],
+        "content": "<p>Some HTML Content</p>",
+        "createdAt": "2017-08-17T09:58:00.562Z"
+      }
 }
 ```
 * Error Response  
@@ -219,25 +219,25 @@ required: id=[object_id]
 * Success Response  
 ```js
 {
-	"status": {
-  	"n": 1,
-  	"ok": 1
-	},
-	"articleBefore": {
-      "__v": 0,
-      "_id": "5a3f7bc02821764c7f44b86e",
-      "title": "[Waifu Friday] Kizuna Ai",
-      "author": "Kagamine Punk",
-      "image_header": "http://jpg.link.com/img.jpg",
-      "category": [
-        "Perfect",
-        "Virtual",
-        "Waifu",
-        "waifu friday"
-      ],
-      "content": "<p>Some HTML Content</p>",
-      "createdAt": "2017-08-17T09:58:00.562Z"
-	}
+      "status": {
+        "n": 1,
+        "ok": 1
+      },
+      "articleBefore": {
+        "__v": 0,
+        "_id": "5a3f7bc02821764c7f44b86e",
+        "title": "[Waifu Friday] Kizuna Ai",
+        "author": "Kagamine Punk",
+        "image_header": "http://jpg.link.com/img.jpg",
+        "category": [
+          "Perfect",
+          "Virtual",
+          "Waifu",
+          "waifu friday"
+        ],
+        "content": "<p>Some HTML Content</p>",
+        "createdAt": "2017-08-17T09:58:00.562Z"
+      }
 }
 ```
 * Error Response  
@@ -301,7 +301,7 @@ using params:
 {
     {
     	"status": "OK",
-      "page": 2,
+        "page": 2,
     	"articles": [
         {
           "__v": 0,
@@ -400,7 +400,7 @@ using params:
 {
     {
     	"status": "OK",
-      "page": 2,
+        "page": 2,
     	"articles": [
         {
           "__v": 0,
@@ -498,7 +498,7 @@ using params:
 {
     {
     	"status": "OK",
-      "page": 2,
+        "page": 2,
     	"articles": [
         {
           "__v": 0,
