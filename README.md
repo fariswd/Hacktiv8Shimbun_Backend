@@ -40,20 +40,20 @@ Mobile app server for hacktiv8 Shimbun
 {
     "status": "OK",
     "newArticle": {
-    "__v": 0,
-    "_id": "5a3f7bc02821764c7f44b86e",
-    "title": "[Waifu Friday] Kizuna Ai",
-    "author": "Kagamine Punk",
-    "image_header": "http://jpg.link.com/img.jpg",
-    "category": [
-      "Perfect",
-      "Virtual",
-      "Waifu",
-      "waifu friday"
-    ],
-    "content": "<p>Some HTML Content</p>",
-  	"createdAt": "2017-08-17T09:58:00.562Z"
-	}
+      "__v": 0,
+      "_id": "5a3f7bc02821764c7f44b86e",
+      "title": "[Waifu Friday] Kizuna Ai",
+      "author": "Kagamine Punk",
+      "image_header": "http://jpg.link.com/img.jpg",
+      "category": [
+        "Perfect",
+        "Virtual",
+        "Waifu",
+        "waifu friday"
+      ],
+      "content": "<p>Some HTML Content</p>",
+      "createdAt": "2017-08-17T09:58:00.562Z"
+    }
 }
 ```
 * Error Response  
@@ -332,7 +332,7 @@ using params:
           ],
           "content": "<p>Some HTML Content</p>",
           "createdAt": "2017-08-10T09:58:00.562Z"
-    		},
+        },
         ...
       ]
     }
@@ -431,7 +431,7 @@ using params:
           ],
           "content": "<p>Some HTML Content</p>",
           "createdAt": "2017-08-10T09:58:00.562Z"
-    		},
+        },
         ...
       ]
     }
@@ -529,7 +529,7 @@ using params:
           ],
           "content": "<p>Some HTML Content</p>",
           "createdAt": "2017-08-10T09:58:00.562Z"
-    		},
+        },
         ...
       ]
     }
