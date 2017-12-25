@@ -11,9 +11,9 @@ Mobile app server for hacktiv8 Shimbun
 | [/api/article/:id](#delete--apiarticleid) | DELETE  | params.id | delete an article |
 | [/api/latest](#get--apilatest-or-apilatestpage)      | GET     | -         | get latest 10         |
 | [/api/latest/:page](#get--apilatest-or-apilatestpage) | GET    | params.page |  get page, 10 articles/page |
-| /api/search?keyword= | GET | query.keyword | search by title |
 | /api/category/:category | GET | params.category | get article by category latest 10 |
 | /api/category/:category/:page | GET | params.category, params.page | get article by category, 10 articles/page |
+| /api/search?keyword=&page= | GET | query.keyword, query.page | search by title |
 
 ## API Documentation
 #### POST | /api/article
@@ -300,6 +300,7 @@ using params:
 {
     {
     	"status": "OK",
+      "page": 2,
     	"articles": [
         {
           "__v": 0,
@@ -340,6 +341,203 @@ using params:
 ```js
 {
     status: 'cannot get latest',
+    msg: <error message>
+}
+```
+
+
+#### GET | /api/category/:category or /api/category/:category/:page
+* Description: Get 10 latest category, if use params 10/page, sorted descending
+* Require: params.category
+* Params:  
+optional: page=[Number]
+* Data Params: -
+* Success Response  
+default:
+```js
+{
+    {
+    	"status": "OK",
+    	"articles": [
+        {
+          "__v": 0,
+          "_id": "5a3f7bc02821764c7f44b86e",
+          "title": "[Waifu Friday] Kizuna Ai",
+          "author": "Kagamine Punk",
+          "image_header": "http://jpg.link.com/img.jpg",
+          "category": [
+            "Perfect",
+            "Virtual",
+            "Waifu",
+            "waifu friday"
+          ],
+          "content": "<p>Some HTML Content</p>",
+          "createdAt": "2017-08-17T09:58:00.562Z"
+        },
+        {
+          "__v": 0,
+          "_id": "5a3f7ac32821764c7f44b865",
+          "title": "[Waifu Friday] Hatsune Miku",
+          "author": "Kagamine Punk",
+          "image_header": "http://jpg.link.com/img.jpg",
+          "category": [
+            "Perfect",
+            "Virtual",
+            "Waifu",
+            "waifu friday"
+          ],
+          "content": "<p>Some HTML Content</p>",
+          "createdAt": "2017-08-10T09:58:00.562Z"
+        },
+        ...
+      ]
+    }
+}
+```
+using params:
+```js
+{
+    {
+    	"status": "OK",
+      "page": 2,
+    	"articles": [
+        {
+          "__v": 0,
+      		"_id": "5a3f7bc02821764c7f44b86e",
+          "title": "[Waifu Friday] Kizuna Ai",
+          "author": "Kagamine Punk",
+          "image_header": "http://jpg.link.com/img.jpg",
+          "category": [
+            "Perfect",
+            "Virtual",
+            "Waifu",
+            "waifu friday"
+          ],
+          "content": "<p>Some HTML Content</p>",
+          "createdAt": "2017-08-17T09:58:00.562Z"
+        },
+        {
+          "__v": 0,
+    			"_id": "5a3f7ac32821764c7f44b865",
+          "title": "[Waifu Friday] Hatsune Miku",
+          "author": "Kagamine Punk",
+          "image_header": "http://jpg.link.com/img.jpg",
+          "category": [
+            "Perfect",
+            "Virtual",
+            "Waifu",
+            "waifu friday"
+          ],
+          "content": "<p>Some HTML Content</p>",
+          "createdAt": "2017-08-10T09:58:00.562Z"
+    		},
+        ...
+      ]
+    }
+}
+```
+* Error Response  
+```js
+{
+    status: `cannot get catagory of 'waifu' on page 2`,
+    msg: <error message>
+}
+```
+
+#### GET | /api/search?keyword=XXX or /api/search?keyword=XXX&page=YYY
+* Description: Get 10 latest searched by title, if use params 10/page, sorted descending
+* Require: query.keyword
+* Params:  
+optional: page=[Number]
+* Data Params: -
+* Success Response  
+default:
+```js
+{
+    {
+    	"status": "OK",
+    	"articles": [
+        {
+          "__v": 0,
+          "_id": "5a3f7bc02821764c7f44b86e",
+          "title": "[Waifu Friday] Kizuna Ai",
+          "author": "Kagamine Punk",
+          "image_header": "http://jpg.link.com/img.jpg",
+          "category": [
+            "Perfect",
+            "Virtual",
+            "Waifu",
+            "waifu friday"
+          ],
+          "content": "<p>Some HTML Content</p>",
+          "createdAt": "2017-08-17T09:58:00.562Z"
+        },
+        {
+          "__v": 0,
+          "_id": "5a3f7ac32821764c7f44b865",
+          "title": "[Waifu Friday] Hatsune Miku",
+          "author": "Kagamine Punk",
+          "image_header": "http://jpg.link.com/img.jpg",
+          "category": [
+            "Perfect",
+            "Virtual",
+            "Waifu",
+            "waifu friday"
+          ],
+          "content": "<p>Some HTML Content</p>",
+          "createdAt": "2017-08-10T09:58:00.562Z"
+        },
+        ...
+      ]
+    }
+}
+```
+using params:
+```js
+{
+    {
+    	"status": "OK",
+      "page": 2,
+    	"articles": [
+        {
+          "__v": 0,
+      		"_id": "5a3f7bc02821764c7f44b86e",
+          "title": "[Waifu Friday] Kizuna Ai",
+          "author": "Kagamine Punk",
+          "image_header": "http://jpg.link.com/img.jpg",
+          "category": [
+            "Perfect",
+            "Virtual",
+            "Waifu",
+            "waifu friday"
+          ],
+          "content": "<p>Some HTML Content</p>",
+          "createdAt": "2017-08-17T09:58:00.562Z"
+        },
+        {
+          "__v": 0,
+    			"_id": "5a3f7ac32821764c7f44b865",
+          "title": "[Waifu Friday] Hatsune Miku",
+          "author": "Kagamine Punk",
+          "image_header": "http://jpg.link.com/img.jpg",
+          "category": [
+            "Perfect",
+            "Virtual",
+            "Waifu",
+            "waifu friday"
+          ],
+          "content": "<p>Some HTML Content</p>",
+          "createdAt": "2017-08-10T09:58:00.562Z"
+    		},
+        ...
+      ]
+    }
+}
+```
+* Error Response  
+```js
+{
+    status: `cannot search 'waifu' on page 2`,
     msg: <error message>
 }
 ```

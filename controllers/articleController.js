@@ -126,6 +126,85 @@ const latestPaging = async (req, res) => {
   }
 }
 
+const category = async (req, res) => {
+  try {
+    const articles = await Article
+      .find({ category: { $in: [req.params.category] }})
+      .sort({ createdAt: 'desc' })
+      .limit(10)
+    res.json({
+      status: 'OK',
+      articles: articles
+    })
+  } catch (err) {
+    res.status(500).json({
+      status: 'cannot get catagory of ' + req.params.category,
+      msg: err
+    })
+  }
+}
+
+const categoryPaging = async (req, res) => {
+  try {
+    const page = (+req.params.page - 1) * 10
+    const articles = await Article
+      .find({ category: { $in: [req.params.category] }})
+      .sort({ createdAt: 'desc' })
+      .limit(10)
+      .skip(page)
+    res.json({
+      status: 'OK',
+      page: req.params.page,
+      articles: articles
+    })
+  } catch (err) {
+    res.status(500).json({
+      status: `cannot get catagory of ${req.params.category} on page ${req.params.page}`,
+      msg: err
+    })
+  }
+}
+
+const search = async (req, res) => {
+  if (req.query.page) {
+    try {
+      const page = (+req.query.page - 1) * 10
+      const articles = await Article
+        .find({ $text: { $search: req.query.keyword } })
+        .sort({ createdAt: 'desc' })
+        .limit(10)
+        .skip(page)
+      res.json({
+        status: 'OK',
+        page: req.query.page,
+        articles: articles
+      })
+    } catch (err) {
+      res.status(500).json({
+        status: `cannot search '${req.query.keyword}', on page ${req.query.page}`,
+        msg: err
+      })
+    }
+  } else {
+    try {
+      const articles = await Article
+        .find({ $text: {$search: req.query.keyword} })
+        .sort({ createdAt: 'desc' })
+        .limit(10)
+      res.json({
+        status: 'OK',
+        page: req.query.page,
+        articles: articles
+      })
+    } catch (err) {
+      res.status(500).json({
+        status: `cannot search '${req.query.keyword}'`,
+        msg: err
+      })
+    }
+  }
+}
+
 module.exports = {
   welcomePage,
   postArticle,
@@ -134,5 +213,8 @@ module.exports = {
   editArticle,
   deleteArticle,
   latest,
-  latestPaging
+  latestPaging,
+  category,
+  categoryPaging,
+  search
 };
