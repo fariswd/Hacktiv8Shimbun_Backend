@@ -11,9 +11,10 @@ Mobile app server for hacktiv8 Shimbun
 | [/api/article/:id](#delete--apiarticleid) | DELETE  | params.id | delete an article |
 | [/api/latest](#get--apilatest-or-apilatestpage)      | GET     | -         | get latest 10         |
 | [/api/latest/:page](#get--apilatest-or-apilatestpage) | GET    | params.page |  get page, 10 articles/page |
-| /api/category/:category | GET | params.category | get article by category latest 10 |
-| /api/category/:category/:page | GET | params.category, params.page | get article by category, 10 articles/page |
-| /api/search?keyword=&page= | GET | query.keyword, query.page | search by title |
+| [/api/category/:category](#get--apicategorycategory-or-apicategorycategorypage) | GET | params.category | get article by category latest 10 |
+| [/api/category/:category/:page](#get--apicategorycategory-or-apicategorycategorypage) | GET | params.category, params.page | get article by category, 10 articles/page |
+| [/api/search?keyword=](#get--apisearchkeywordxxx-or-apisearchkeywordxxxpageyyy) | GET | query.keyword | search by title |
+| [/api/search?keyword=&page=](#get--apisearchkeywordxxx-or-apisearchkeywordxxxpageyyy) | GET | query.keyword, query.page | search by title |
 
 ## API Documentation
 #### POST | /api/article
@@ -304,7 +305,7 @@ using params:
     	"articles": [
         {
           "__v": 0,
-      		"_id": "5a3f7bc02821764c7f44b86e",
+          "_id": "5a3f7bc02821764c7f44b86e",
           "title": "[Waifu Friday] Kizuna Ai",
           "author": "Kagamine Punk",
           "image_header": "http://jpg.link.com/img.jpg",
@@ -319,7 +320,7 @@ using params:
         },
         {
           "__v": 0,
-    			"_id": "5a3f7ac32821764c7f44b865",
+          "_id": "5a3f7ac32821764c7f44b865",
           "title": "[Waifu Friday] Hatsune Miku",
           "author": "Kagamine Punk",
           "image_header": "http://jpg.link.com/img.jpg",
@@ -403,7 +404,7 @@ using params:
     	"articles": [
         {
           "__v": 0,
-      		"_id": "5a3f7bc02821764c7f44b86e",
+          "_id": "5a3f7bc02821764c7f44b86e",
           "title": "[Waifu Friday] Kizuna Ai",
           "author": "Kagamine Punk",
           "image_header": "http://jpg.link.com/img.jpg",
@@ -418,7 +419,7 @@ using params:
         },
         {
           "__v": 0,
-    			"_id": "5a3f7ac32821764c7f44b865",
+          "_id": "5a3f7ac32821764c7f44b865",
           "title": "[Waifu Friday] Hatsune Miku",
           "author": "Kagamine Punk",
           "image_header": "http://jpg.link.com/img.jpg",
@@ -501,7 +502,7 @@ using params:
     	"articles": [
         {
           "__v": 0,
-      		"_id": "5a3f7bc02821764c7f44b86e",
+          "_id": "5a3f7bc02821764c7f44b86e",
           "title": "[Waifu Friday] Kizuna Ai",
           "author": "Kagamine Punk",
           "image_header": "http://jpg.link.com/img.jpg",
@@ -516,7 +517,7 @@ using params:
         },
         {
           "__v": 0,
-    			"_id": "5a3f7ac32821764c7f44b865",
+          "_id": "5a3f7ac32821764c7f44b865",
           "title": "[Waifu Friday] Hatsune Miku",
           "author": "Kagamine Punk",
           "image_header": "http://jpg.link.com/img.jpg",
