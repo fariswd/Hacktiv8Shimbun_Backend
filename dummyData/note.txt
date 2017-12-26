@@ -1,0 +1,4 @@
+bucket:
+http://localhost/img/html-1.jpg
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dui augue, vehicula et varius id, varius quis ligula. Aenean congue lorem sem, id viverra urna ultrices eu. Morbi vel purus elit. Nulla rutrum quam sit amet leo volutpat, eu faucibus odio viverra. Donec in purus et erat tempor semper. Donec sagittis diam sed ligula auctor egestas. Nullam viverra rutrum sem a tristique. Sed diam enim, viverra fermentum pellentesque sit amet, dictum sit amet enim. Vestibulum feugiat ex ut erat viverra, sit amet ultrices nunc hendrerit. Aenean justo quam, rutrum vitae convallis a, consectetur id nunc. Integer ac vulputate elit, ut molestie mauris. Sed sit amet ipsum scelerisque, consequat massa convallis, lacinia erat. Integer tincidunt efficitur arcu, sed luctus sem vestibulum eu. Praesent vestibulum nibh erat, ac viverra ligula ultrices et. Integer dapibus ipsum eu faucibus malesuada. 

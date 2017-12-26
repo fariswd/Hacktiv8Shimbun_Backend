@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Introduction HTML",
+    "author": "capung",
+    "imageHeader": "http://localhost/img/html-1.jpg",
+    "category": ["html", "intro", "start", "phase 0"],
+    "createdAt": "Fri Dec 01 2017 00:00:00 GMT+0700 (WIB)",
+    "content": "<p></p><img src='http://localhost/img/html-2.jpg' /><p></p>"
+  },
+  {
+    "title": "Introduction CSS",
+    "author": "capung",
+    "imageHeader": "http://localhost/img/css-1.jpg",
+    "category": ["css", "intro", "start", "phase 0"],
+    "createdAt": "Sat Dec 02 2017 00:00:00 GMT+0700 (WIB)",
+    "content": "<p></p><img src='http://localhost/img/css-2.jpg' /><p></p>"
+  },
+  {
+    "title": "Introduction Javascript",
+    "author": "capung",
+    "imageHeader": "http://localhost/img/js-1.jpg",
+    "category": ["javascript", "js", "intro", "phase 0"],
+    "createdAt": "Sun Dec 03 2017 00:00:00 GMT+0700 (WIB)",
+    "content": "<p></p><p></p>"
+  },
+  {
+    "title": "Introduction GIT",
+    "author": "capung",
+    "imageHeader": "http://localhost/img/git-1.jpg",
+    "category": ["git", "intro", "start", "phase 0"],
+    "createdAt": "Mon Dec 04 2017 00:00:00 GMT+0700 (WIB)",
+    "content": "<p></p><img src='http://localhost/img/git-2.jpg' /><p></p>"
+  },
+  {
+    "title": "Conditional If-Else Javascript",
+    "author": "capung",
+    "imageHeader": "http://localhost/img/if-1.jpg",
+    "category": ["if", "conditional", "beginner", "phase 0"],
+    "createdAt": "Tue Dec 05 2017 00:00:00 GMT+0700 (WIB)",
+    "content": "<p></p><img src='http://localhost/img/if-2.jpg' /><p></p>"
+  },
+  {
+    "title": "Looping For While Javascript",
+    "author": "capung",
+    "imageHeader": "http://localhost/img/while-1.jpg",
+    "category": ["for", "while", "loop", "phase 0"],
+    "createdAt": "Wed Dec 06 2017 00:00:00 GMT+0700 (WIB)",
+    "content": "<p></p><p></p>"
+  },
+  {
+    "title": "Introduction Function Javascript",
+    "author": "capung",
+    "imageHeader": "http://localhost/img/function-1.jpg",
+    "category": ["function", "intro", "start", "phase 0"],
+    "createdAt": "Thu Dec 07 2017 00:00:00 GMT+0700 (WIB)",
+    "content": "<p></p><p></p>"
+  },
+]

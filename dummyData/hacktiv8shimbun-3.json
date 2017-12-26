@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Sequelize",
+    "author": "capung",
+    "imageHeader": "http://localhost/img/sequelize-1.png",
+    "category": ["orm", "sequelize", "intro", "beginner", "phase 1"],
+    "createdAt": "Fri Dec 15 2017 00:00:00 GMT+0700 (WIB)",
+    "content": "<p></p><p></p>"
+  },
+  {
+    "title": "Heroku",
+    "author": "capung",
+    "imageHeader": "http://localhost/img/heroku-1.jpg",
+    "category": ["heroku", "intro", "beginner", "phase 1"],
+    "createdAt": "Sat Dec 16 2017 00:00:00 GMT+0700 (WIB)",
+    "content": "<p></p><p></p>"
+  },
+  {
+    "title": "Mongoose",
+    "author": "capung",
+    "imageHeader": "http://localhost/img/mongodb-1.jpg",
+    "category": ["orm", "mongoose", "intro", "beginner", "phase 2"],
+    "createdAt": "Sun Dec 17 2017 00:00:00 GMT+0700 (WIB)",
+    "content": "<p></p><p></p>"
+  },
+  {
+    "title": "Facebook Login",
+    "author": "capung",
+    "imageHeader": "http://localhost/img/facebook-1.jpg",
+    "category": ["facebook", "intro", "beginner", "phase 2"],
+    "createdAt": "Mon Dec 18 2017 00:00:00 GMT+0700 (WIB)",
+    "content": "<p></p><p></p>"
+  },
+  {
+    "title": "Twitter API",
+    "author": "capung",
+    "imageHeader": "http://localhost/img/twitter-1.jpg",
+    "category": ["twitter", "intro", "beginner", "phase 2"],
+    "createdAt": "Tue Dec 19 2017 00:00:00 GMT+0700 (WIB)",
+    "content": "<p></p><p></p>"
+  },
+  {
+    "title": "Vuejs",
+    "author": "capung",
+    "imageHeader": "http://localhost/img/vue-1.jpg",
+    "category": ["Vue", "Vuex", "intro", "beginner", "phase 2"],
+    "createdAt": "Wed Dec 20 2017 00:00:00 GMT+0700 (WIB)",
+    "content": "<p></p><p></p>"
+  },
+  {
+    "title": "Google Cloud Platform",
+    "author": "capung",
+    "imageHeader": "http://localhost/img/googlecloud-1.jpg",
+    "category": ["google cloud", "intro", "beginner", "phase 2"],
+    "createdAt": "Thu Dec 21 2017 00:00:00 GMT+0700 (WIB)",
+    "content": "<p></p><img src='http://localhost/img/nodejs-1.jpeg' /><p></p>"
+  },
+]

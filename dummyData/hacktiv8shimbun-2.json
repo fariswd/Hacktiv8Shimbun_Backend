@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Array Javascript",
+    "author": "capung",
+    "imageHeader": "http://localhost/img/array-1.jpg",
+    "category": ["array", "intro", "start", "phase 0"],
+    "createdAt": "Fri Dec 08 2017 00:00:00 GMT+0700 (WIB)",
+    "content": "<p></p><p></p>"
+  },
+  {
+    "title": "Recursive Javascript",
+    "author": "capung",
+    "imageHeader": "http://localhost/img/recursive-1.jpg",
+    "category": ["recursive", "intro", "start", "phase 0"],
+    "createdAt": "Sat Dec 09 2017 00:00:00 GMT+0700 (WIB)",
+    "content": "<p></p><p></p>"
+  },
+  {
+    "title": "Regex Javascript",
+    "author": "capung",
+    "imageHeader": "http://localhost/img/regex-1.jpg",
+    "category": ["regex", "intro", "start", "phase 0"],
+    "createdAt": "Sun Dec 10 2017 00:00:00 GMT+0700 (WIB)",
+    "content": "<p></p><p></p>"
+  },
+  {
+    "title": "Object Oriented Programming",
+    "author": "capung",
+    "imageHeader": "http://localhost/img/oop-1.jpg",
+    "category": ["OOP", "intro", "start", "phase 0"],
+    "createdAt": "Mon Dec 11 2017 00:00:00 GMT+0700 (WIB)",
+    "content": "<p></p><p></p>"
+  },
+  {
+    "title": "Node Js",
+    "author": "capung",
+    "imageHeader": "http://localhost/img/nodejs-1.jpg",
+    "category": ["NodeJs", "intro", "start", "phase 1"],
+    "createdAt": "Tue Dec 12 2017 00:00:00 GMT+0700 (WIB)",
+    "content": "<p></p><img src='http://localhost/img/nodejs-1.jpeg' /><p></p>"
+  },
+  {
+    "title": "Express",
+    "author": "capung",
+    "imageHeader": "http://localhost/img/express-1.jpg",
+    "category": ["Express", "intro", "start", "phase 1"],
+    "createdAt": "Wed Dec 13 2017 00:00:00 GMT+0700 (WIB)",
+    "content": "<p></p><img src='http://localhost/img/express-2.jpg' /><p></p>"
+  },
+  {
+    "title": "SQLite",
+    "author": "capung",
+    "imageHeader": "http://localhost/img/sqlite-1.jpeg",
+    "category": ["sqlite", "intro", "start", "phase 1"],
+    "createdAt": "Thu Dec 14 2017 00:00:00 GMT+0700 (WIB)",
+    "content": "<p></p><p></p>"
+  },
+]

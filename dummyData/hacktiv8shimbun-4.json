@@ -1,0 +1,66 @@
+[
+  {
+    "title": "Amazon Web Service",
+    "author": "capung",
+    "imageHeader": "http://localhost/img/amazon-1.jpg",
+    "category": ["amazon", "web", "intro", "beginner", "phase 2"],
+    "createdAt": "Fri Dec 22 2017 00:00:00 GMT+0700 (WIB)",
+    "content": "<p></p><img src='http://localhost/img/nodejs-1.jpeg' /><p></p>"
+  },
+  {
+    "title": "Google Firebase",
+    "author": "capung",
+    "imageHeader": "http://localhost/img/firebase-1.jpg",
+    "category": ["firebase", "google", "intro", "beginner", "phase 2"],
+    "createdAt": "Sat Dec 23 2017 00:00:00 GMT+0700 (WIB)",
+    "content": "<p></p><p></p>"
+  },
+  {
+    "title": "Semantic Web",
+    "author": "capung",
+    "imageHeader": "http://localhost/img/semantic-1.jpg",
+    "category": ["semantic", "web", "intro", "beginner", "phase 2"],
+    "createdAt": "Sun Dec 24 2017 00:00:00 GMT+0700 (WIB)",
+    "content": "<p></p><p></p>"
+  },
+  {
+    "title": "D3 Chart",
+    "author": "capung",
+    "imageHeader": "http://localhost/img/d3-1.png",
+    "category": ["d3", "chart", "intro", "intermediate", "phase 3"],
+    "createdAt": "Mon Dec 25 2017 00:00:00 GMT+0700 (WIB)",
+    "content": "<p></p><p></p>"
+  },
+  {
+    "title": "Reactjs",
+    "author": "capung",
+    "imageHeader": "http://localhost/img/react-1.jpg",
+    "category": ["react", "redux", "intermediate", "phase 3"],
+    "createdAt": "Tue Dec 26 2017 00:00:00 GMT+0700 (WIB)",
+    "content": "<p></p><p></p>"
+  },
+  {
+    "title": "React Native",
+    "author": "capung",
+    "imageHeader": "http://localhost/img/reactnative-1.jpg",
+    "category": ["react", "native", "redux", "intro", "intermediate", "phase 3"],
+    "createdAt": "Wed Dec 27 2017 00:00:00 GMT+0700 (WIB)",
+    "content": "<p></p><p></p>"
+  },
+  {
+    "title": "Cache Redis",
+    "author": "capung",
+    "imageHeader": "http://localhost/img/redis-1.jpg",
+    "category": ["cache", "redis", "intro", "intermediate", "phase 3"],
+    "createdAt": "Thu Dec 28 2017 00:00:00 GMT+0700 (WIB)",
+    "content": "<p></p><p></p>"
+  },
+  {
+    "title": "Cache Realm",
+    "author": "capung",
+    "imageHeader": "http://localhost/img/realm-1.jpg",
+    "category": ["cache", "realm", "intro", "intermediate", "phase 2"],
+    "createdAt": "Fri Dec 29 2017 00:00:00 GMT+0700 (WIB)",
+    "content": "<p></p><p></p>"
+  },
+]

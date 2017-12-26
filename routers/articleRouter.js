@@ -6,6 +6,9 @@ router.get('/', articleController.welcomePage)
 // | /api/article     | POST    | {json}            | post a new article |
 router.post('/article/', articleController.postArticle)
 
+// | /api/articles     | POST    | [{json},{json}]  | post a bunch new articles |
+router.post('/articles/', articleController.postArticles)
+
 // | /api/articles/    | GET     | -                 | get all article   |
 router.get('/article/', articleController.getArticles)
 

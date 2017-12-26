@@ -23,6 +23,23 @@ const postArticle = async (req, res) => {
   }
 }
 
+
+const postArticles = async (req, res) => {
+  try {
+    const article = new Article(req.body)
+    const saveArticle = await article.save()
+    res.json({
+      status: 'OK',
+      newArticle: saveArticle
+    })
+  } catch (err) {
+    res.status(500).json({
+      status: 'cannot post article',
+      msg: err
+    })
+  }
+}
+
 const getArticles = async (req, res) => {
   try {
     const articles = await Article.find()
