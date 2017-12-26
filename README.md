@@ -4,7 +4,8 @@ Mobile app server for hacktiv8 Shimbun
 ## HTTP Endpoint
 | Endpoint         | HTTP    | Require   | Description          |
 |------------------|---------|-----------|----------------------|
-| [/api/article](#post--apiarticle)     | POST    | {json}    | post a new article   |
+| [/api/article/](#post--apiarticle)     | POST    | {json}    | post a new article   |
+| [/api/articles/](#post--apiarticles)     | POST    | {articles: [{json},{json}, ... ]}    | post a new articles   |
 | [/api/article/](#get--apiarticle-or-apiarticleid)    | GET     | - | get all article  |
 | [/api/article/:id](#get--apiarticle-or-apiarticleid) | GET     | params.id | get article by id  |
 | [/api/article/:id](#put--apiarticleid) | PUT     | params.id, {json}    | edit an article   |
@@ -54,6 +55,74 @@ Mobile app server for hacktiv8 Shimbun
       "content": "<p>Some HTML Content</p>",
       "createdAt": "2017-08-17T09:58:00.562Z"
     }
+}
+```
+* Error Response  
+```js
+{
+    status: 'cannot post article',
+    msg: <error message>
+}
+```
+
+#### POST | /api/articles
+* Require: {articles: [{json},{json}, ... ]}
+* Data Params:
+```js
+{ "articles" :
+    [
+      {
+        "_id": "5a3f7bc02821764c7f44b86e",
+        "title": "[Waifu Friday] Kizuna Ai",
+        "author": "Kagamine Punk",
+        "imageHeader": "http://jpg.link.com/img.jpg",
+        "category": [
+          "Perfect",
+          "Virtual",
+          "Waifu",
+          "waifu friday"
+        ],
+        "content": "<p>Some HTML Content</p>",
+        "createdAt": "Fri Dec 01 2017 00:00:00 GMT+0700 (WIB)"
+      },
+      {
+        "_id": "5a3f7bc02821764c7f44b86e",
+        "title": "[Waifu Friday] Shiina Mashiro",
+        "author": "Kagamine Punk",
+        "imageHeader": "http://jpg.link.com/img.jpg",
+        "category": [
+          "Perfect",
+          "Virtual",
+          "Waifu",
+          "waifu friday"
+        ],
+        "content": "<p>Some HTML Content</p>",
+        "createdAt": "Sat Dec 02 2017 00:00:00 GMT+0700 (WIB)"
+      },
+      ...
+    ]
+}
+```
+* Success Response  
+```js
+{
+    "status": "OK",
+    "newArticle": {
+      "__v": 0,
+      "_id": "5a3f7bc02821764c7f44b86e",
+      "title": "[Waifu Friday] Kizuna Ai",
+      "author": "Kagamine Punk",
+      "image_header": "http://jpg.link.com/img.jpg",
+      "category": [
+        "Perfect",
+        "Virtual",
+        "Waifu",
+        "waifu friday"
+      ],
+      "content": "<p>Some HTML Content</p>",
+      "createdAt": "2017-08-17T09:58:00.562Z"
+    },
+    ...
 }
 ```
 * Error Response  

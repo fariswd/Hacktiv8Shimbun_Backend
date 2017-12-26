@@ -26,8 +26,9 @@ const postArticle = async (req, res) => {
 
 const postArticles = async (req, res) => {
   try {
-    const article = new Article(req.body)
-    const saveArticle = await article.save()
+    // res.json(req.body.articles)
+    // const article = new Article(req.body)
+    const saveArticle = await Article.insertMany(req.body.articles)
     res.json({
       status: 'OK',
       newArticle: saveArticle
@@ -225,6 +226,7 @@ const search = async (req, res) => {
 module.exports = {
   welcomePage,
   postArticle,
+  postArticles,
   getArticles,
   getArticle,
   editArticle,
