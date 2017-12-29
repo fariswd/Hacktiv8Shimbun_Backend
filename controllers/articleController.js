@@ -107,6 +107,10 @@ const deleteArticle = async (req, res) => {
 
 const latest = async (req, res) => {
   try {
+    //check version on atlas
+    //check version on redis
+    //if(atlas=redis) send redis
+    //else get atlas, set redis(latest)...latestPage2...latestPage3
     const articles = await Article
       .find()
       .sort({ createdAt: 'desc' })
@@ -125,6 +129,10 @@ const latest = async (req, res) => {
 
 const latestPaging = async (req, res) => {
   try {
+    //check version on atlas
+    //check version on redis
+    //if(atlas=redis) send redis
+    //else get atlas, set redis(latest)...latestPage2...latestPage3
     const page = (+req.params.page - 1) * 10
     const articles = await Article
       .find()

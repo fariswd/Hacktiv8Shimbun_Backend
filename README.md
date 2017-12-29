@@ -25,6 +25,11 @@ GET http://s1.hacktiv8shimbun.ga/api/article
 | [/api/search?keyword=](#get--apisearchkeywordxxx-or-apisearchkeywordxxxpageyyy) | GET | query.keyword | search by title |
 | [/api/search?keyword=&page=](#get--apisearchkeywordxxx-or-apisearchkeywordxxxpageyyy) | GET | query.keyword, query.page | search by title |
 
+## Versioning (Redis Cache)
+| Endpoint         | HTTP    | Require   | Description          |
+|------------------|---------|-----------|----------------------|
+| /api/latestver   | GET     | -         | get version cache    |
+
 ## API Documentation
 #### POST | /api/article
 * Require: {json}
