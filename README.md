@@ -2,11 +2,11 @@
 Mobile app server for hacktiv8 Shimbun
 
 ## Host
-Temporary Host: http://35.185.187.98/  
+Host: http://s1.hacktiv8shimbun.ga
 combine with HTTP endpoint  
 example:  
 ```
-GET http://35.185.187.98/api/article
+GET http://s1.hacktiv8shimbun.ga/api/article
 ```
 
 ## HTTP Endpoint
