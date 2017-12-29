@@ -2,7 +2,7 @@
 Mobile app server for hacktiv8 Shimbun
 
 ## Host
-Host: http://s1.hacktiv8shimbun.ga
+Host: http://s1.hacktiv8shimbun.ga  
 combine with HTTP endpoint  
 example:  
 ```
