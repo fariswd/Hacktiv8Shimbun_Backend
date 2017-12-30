@@ -37,4 +37,6 @@ router.get('/category/:category/:page', articleController.categoryPaging)
 // | /api/search?keyword=XXX&page=YY | GET | query.keyword, query.page | search by title   |
 router.get('/search', articleController.search)
 
+router.get('/latestver', articleController.getVer)
+
 module.exports = router;
