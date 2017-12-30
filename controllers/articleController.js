@@ -1,9 +1,13 @@
 const Article = require('../models/articleModel')
+const LatestVersion = require('../models/articleVersionModel')
+
+//versionHelper.updateVersion()
+const versionHelper = require('../helpers/getVersion')
 
 const welcomePage = (req, res) => {
   res.json({
     status: 'ok',
-    apiVer: '1.0.0'
+    apiVer: '1.0.0 cached'
   })
 }
 
@@ -11,8 +15,10 @@ const postArticle = async (req, res) => {
   try {
     const article = new Article(req.body)
     const saveArticle = await article.save()
+    const updateVersion = await versionHelper.updateVersion()
     res.json({
       status: 'OK',
+      version: updateVersion,
       newArticle: saveArticle
     })
   } catch (err) {
@@ -23,14 +29,15 @@ const postArticle = async (req, res) => {
   }
 }
 
-
 const postArticles = async (req, res) => {
   try {
     // res.json(req.body.articles)
     // const article = new Article(req.body)
     const saveArticle = await Article.insertMany(req.body.articles)
+    const updateVersion = await versionHelper.updateVersion()
     res.json({
       status: 'OK',
+      version: updateVersion,
       newArticle: saveArticle
     })
   } catch (err) {
@@ -75,9 +82,11 @@ const editArticle = async (req, res) => {
   try {
     const before = await Article.findOne({ _id: req.params.id })
     const statusEdit = await Article.update({ _id: req.params.id }, req.body)
+    const updateVersion = await versionHelper.updateVersion()
     req.body._id = req.params.id
     res.json({
       status: statusEdit,
+      version: updateVersion,
       articleBefore: before,
       artcileAfter: req.body
     })
@@ -93,8 +102,10 @@ const deleteArticle = async (req, res) => {
   try {
     const before = await Article.findOne({ _id: req.params.id })
     const statusDelete = await Article.remove({ _id: req.params.id })
+    const updateVersion = await versionHelper.updateVersion()
     res.json({
       status: statusDelete,
+      version: updateVersion,
       articleBefore: before
     })
   } catch (err) {
@@ -107,14 +118,43 @@ const deleteArticle = async (req, res) => {
 
 const latest = async (req, res) => {
   try {
-    const articles = await Article
+    const status = await versionHelper.checkVersion(req.params.page)
+    if(status){
+      let articles = versionHelper.getCache('latest')
+      articles.then(result => {
+        res.json({
+          status: 'OK',
+          articles: JSON.parse(result[0]),
+          cache: 'OK'
+        })
+      })
+      .catch(err => {
+        res.status(500).json({
+          status: 'cannot get cached latest',
+          msg: err
+        })
+      })
+    } else {
+      //else get atlas, set redis(latest)...latestPage2...latestPage3
+      const articles = await Article
       .find()
       .sort({ createdAt: 'desc' })
       .limit(10)
-    res.json({
-      status: 'OK',
-      articles: articles
-    })
+      const setCache = versionHelper.setCache('latest', articles)
+      if(setCache) {
+        res.json({
+          status: 'OK',
+          articles: articles,
+          cache: 'OK'
+        })
+      } else {
+        res.json({
+          status: 'OK',
+          articles: articles,
+          cache: 'cannot cached'
+        })
+      }
+    }
   } catch (err) {
     res.status(500).json({
       status: 'cannot get latest',
@@ -125,17 +165,47 @@ const latest = async (req, res) => {
 
 const latestPaging = async (req, res) => {
   try {
-    const page = (+req.params.page - 1) * 10
-    const articles = await Article
+    const status = await versionHelper.checkVersion(req.params.page)
+    if(status){
+      let articles = versionHelper.getCache('latest' + req.params.page)
+      articles.then(result => {
+        res.json({
+          status: 'OK',
+          articles: JSON.parse(result[0]),
+          cache: 'OK'
+        })
+      })
+      .catch(err => {
+        res.status(500).json({
+          status: 'cannot get cached latest',
+          msg: err
+        })
+      })
+    } else {
+      //else get atlas, set redis(latest)...latestPage2...latestPage3
+      const page = (+req.params.page - 1) * 10
+      const articles = await Article
       .find()
       .sort({ createdAt: 'desc' })
       .limit(10)
       .skip(page)
-    res.json({
-      status: 'OK',
-      page: req.params.page,
-      articles: articles
-    })
+      const setCache = versionHelper.setCache('latest' + req.params.page, articles)
+      if(setCache) {
+        res.json({
+          status: 'OK',
+          page: req.params.page,
+          articles: articles,
+          cache: 'OK'
+        })
+      } else {
+        res.json({
+          status: 'OK',
+          page: req.params.page,
+          articles: articles,
+          cache: 'cannot cached'
+        })
+      }
+    }
   } catch (err) {
     res.status(500).json({
       status: 'cannot get page' + req.params.page,
@@ -223,6 +293,32 @@ const search = async (req, res) => {
   }
 }
 
+const getVer = async (req, res) => {
+  try {
+    const version = await LatestVersion.find()
+    if(version.length == 0){
+      const latestVersion = new LatestVersion({ version: 0 })
+      const newVersion = await latestVersion.save()
+      res.send({
+        status: 'OK',
+        version: -1,
+        forYou: 'no version created, let me create for you, here you go',
+        msg: newVersion
+      })
+    } else {
+      res.send({
+        status: 'OK',
+        version: version[0].version
+      })
+    }
+  } catch (err) {
+    res.status(500).send({
+      status: 'cannot get version',
+      msg: err
+    })
+  }
+}
+
 module.exports = {
   welcomePage,
   postArticle,
@@ -235,5 +331,6 @@ module.exports = {
   latestPaging,
   category,
   categoryPaging,
-  search
+  search,
+  getVer
 };
