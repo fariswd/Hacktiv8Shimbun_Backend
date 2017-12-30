@@ -1,12 +1,12 @@
 # Hacktiv8Shimbun_Backend
-Mobile app server for hacktiv8 Shimbun 
+Mobile app server for hacktiv8 Shimbun
 
 ## Host
-Host: http://s1.hacktiv8shimbun.ga  
+Host: http://s1.hacktiv8shimbun.ga:81  
 combine with HTTP endpoint  
 example:  
 ```
-GET http://s1.hacktiv8shimbun.ga/api/article
+GET http://s1.hacktiv8shimbun.ga:81/api/article
 ```
 
 ## HTTP Endpoint
