@@ -1,5 +1,6 @@
 # Hacktiv8Shimbun_Backend
-Mobile app server for hacktiv8 Shimbun
+Mobile app server for hacktiv8 Shimbun  
+non cache version here https://github.com/fariswd/Hacktiv8Shimbun_Backend/tree/server_non_cached  
 
 ## Host
 Host: http://s1.hacktiv8shimbun.ga  
